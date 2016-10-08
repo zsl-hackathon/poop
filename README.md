@@ -38,6 +38,7 @@
 ### Building the project
  - Build the optimized project using `gulp build`
  - This create the optimized code for the project and puts it in the build folder
+ - Only run this from the 'deploy' branch before pushing the code to Heroku to redeploy
 
 ### Running the optimized code
  - Run the optimize project from the build folder with `gulp serve-build`
