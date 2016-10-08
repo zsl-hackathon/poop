@@ -13,8 +13,8 @@
   }
 
   var config = {
-    appErrorPrefix: '[poop Error] ',
-    appTitle: 'poop'
+    appErrorPrefix: '[app Error] ',
+    appTitle: 'Palm Oil Optimisation Project'
   };
 
   core.value('config', config);
