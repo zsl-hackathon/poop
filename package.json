@@ -1,24 +1,20 @@
 {
   "name": "poop",
-  "description": "Palm Oil Optimisation Project",
+  "description": "poop Project Generated from HotTowel Angular",
   "version": "0.0.0",
-  "engines": {
-    "node": "4.5.0"
-  },
   "scripts": {
     "init": "npm install",
     "install": "bower install",
-    "postinstall": "gulp serve-build",
-    "start": "",
+    "start": "node src/server/app.js",
     "test": "gulp test"
   },
   "dependencies": {
     "body-parser": "^1.8.2",
-    "bower": "^1.5.2",
     "express": "^4.9.3",
     "morgan": "^1.1.1",
-    "serve-favicon": "^2.0.1",
-    "yargs": "^3.15.0",
+    "serve-favicon": "^2.0.1"
+  },
+  "devDependencies": {
     "browser-sync": "~2.11.2",
     "chai": "^3.1.0",
     "chai-as-promised": "^5.1.0",
