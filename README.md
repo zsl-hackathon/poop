@@ -182,7 +182,7 @@ The `blocks.router` module contains a routing helper module that assists in addi
 
     Copy all images from source to the build folder
 
-### Styles
+### Styyles
 
 - `gulp styles`
 
