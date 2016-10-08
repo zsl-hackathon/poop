@@ -23,7 +23,7 @@ console.log('PORT=' + port);
 console.log('NODE_ENV=' + environment);
 
 switch (environment) {
-  case 'build':
+  case 'production':
     console.log('** BUILD **');
     app.use(express.static('./build/'));
     // Any invalid calls for templateUrls are under app/* and should return 404
