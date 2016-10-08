@@ -1,6 +1,6 @@
 {
   "name": "poop",
-  "description": "poop Project Generated from HotTowel Angular",
+  "description": "Project Generated from HotTowel Angular",
   "version": "0.0.0",
   "scripts": {
     "init": "npm install",
@@ -9,6 +9,7 @@
     "test": "gulp test"
   },
   "dependencies": {
+    "bower": "1.7.9",
     "body-parser": "^1.8.2",
     "express": "^4.9.3",
     "morgan": "^1.1.1",
