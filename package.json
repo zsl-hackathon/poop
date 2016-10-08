@@ -1,10 +1,11 @@
 {
   "name": "poop",
-  "description": "poop Project Generated from HotTowel Angular",
+  "description": "Palm Oil Optimisation Project",
   "version": "0.0.0",
   "scripts": {
     "init": "npm install",
     "install": "bower install",
+    "postinstall": "gulp serve-build",
     "start": "node src/server/app.js",
     "test": "gulp test"
   },
