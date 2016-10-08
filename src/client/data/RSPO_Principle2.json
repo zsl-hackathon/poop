@@ -1,0 +1,462 @@
+[
+  {
+    "id": 1,
+    "Number": "1.1.1",
+    "Subpart": "a",
+    "Requirement": "List of company stakeholders",
+    "Smallholder/Group": "Group",
+    "Evidence": "List of company stakeholders",
+    "Evidence format": "Document",
+    "Guidance": ""
+  },
+  {
+    "id": 2,
+    "Number": "1.1.1",
+    "Subpart": "b, d, e, f, g, h, i",
+    "Requirement": "Stakeholder monitoring system",
+    "Smallholder/Group": "-",
+    "Evidence": "Use of the system is sufficient",
+    "Evidence format": "-",
+    "Guidance": ""
+  },
+  {
+    "id": 3,
+    "Number": "1.1.1",
+    "Subpart": "c",
+    "Requirement": "Stakeholder verification",
+    "Smallholder/Group": "Group",
+    "Evidence": "Images of stakeholder proof of identity",
+    "Evidence format": "Images",
+    "Guidance": ""
+  },
+  {
+    "id": 4,
+    "Number": "1.1.2",
+    "Subpart": "a, b, c, d, e, f",
+    "Requirement": "SOP covering constructive response to stakeholders",
+    "Smallholder/Group": "Group",
+    "Evidence": "Record of management SOP training",
+    "Evidence format": "Record",
+    "Guidance": ""
+  },
+  {
+    "id": 5,
+    "Number": "1.2.1",
+    "Subpart": "a, b, c, d, e",
+    "Requirement": "Management document system",
+    "Smallholder/Group": "-",
+    "Evidence": "Use of the system is sufficient",
+    "Evidence format": "-",
+    "Guidance": ""
+  },
+  {
+    "id": 6,
+    "Number": "1.3.1",
+    "Subpart": "a, b",
+    "Requirement": "Ethical code of conduct policy",
+    "Smallholder/Group": "Group",
+    "Evidence": "Code of conduct",
+    "Evidence format": "Document",
+    "Guidance": "Template from RSPO"
+  },
+  {
+    "id": 7,
+    "Number": "1.3.1",
+    "Subpart": "c, d",
+    "Requirement": "Access to code of conduct",
+    "Smallholder/Group": "-",
+    "Evidence": "Use of the system is sufficient",
+    "Evidence format": "-",
+    "Guidance": ""
+  },
+  {
+    "id": 8,
+    "Number": "2.1.1",
+    "Subpart": "a, b",
+    "Requirement": "Complete list of legal requirements",
+    "Smallholder/Group": "Group",
+    "Evidence": "List of local legal requirements",
+    "Evidence format": "Document",
+    "Guidance": "Relevant legislation includes, but is not limited to: regulations governing land tenure and land-use rights, labour, agricultural practices (e.g. chemical use), environment (e.g. wildlife laws, pollution, environmental management and forestry laws), storage, transportation and processing practices. It also includes laws made pursuant to a country’s obligations under international laws or conventions (e.g. the Convention on Biological Diversity (CBD), ILO core Conventions and UN Guiding Principles on Business and Human Rights.\n9,2.1.2,a,List of management personel,Group,List of management personel,Document,\n10,2.1.2,"
+  },
+  {
+    "id": 11,
+    "Number": "2.1.3",
+    "Subpart": "a",
+    "Requirement": "SOP covering anual legal audit",
+    "Smallholder/Group": "Group",
+    "Evidence": "Record of management SOP training",
+    "Evidence format": "Record",
+    "Guidance": ""
+  },
+  {
+    "id": 12,
+    "Number": "2.1.4",
+    "Subpart": "a",
+    "Requirement": "SOP covering tracking changes in the law",
+    "Smallholder/Group": "Group",
+    "Evidence": "Record of management SOP training",
+    "Evidence format": "Record",
+    "Guidance": ""
+  },
+  {
+    "id": 13,
+    "Number": "2.2.1",
+    "Subpart": "a, c, d",
+    "Requirement": "Documents showing legal ownership or lease of land",
+    "Smallholder/Group": "Smallholder",
+    "Evidence": "Image of legal ownership/lease document",
+    "Evidence format": "Image(s)",
+    "Guidance": ""
+  },
+  {
+    "id": 14,
+    "Number": "2.2.1",
+    "Subpart": "b",
+    "Requirement": "Documents showing history of land tenure",
+    "Smallholder/Group": "-",
+    "Evidence": "Use of the system is sufficient",
+    "Evidence format": "-",
+    "Guidance": ""
+  },
+  {
+    "id": 15,
+    "Number": "2.2.2",
+    "Subpart": "a, d",
+    "Requirement": "Map showing location of boundaries",
+    "Smallholder/Group": "Smallholder",
+    "Evidence": "Map of smallholding",
+    "Evidence format": "Map",
+    "Guidance": ""
+  },
+  {
+    "id": 16,
+    "Number": "2.2.2",
+    "Subpart": "b, e",
+    "Requirement": "Physical boundary markers",
+    "Smallholder/Group": "Smallholder",
+    "Evidence": "Images of boundary markers",
+    "Evidence format": "Image(s)",
+    "Guidance": ""
+  },
+  {
+    "id": 17,
+    "Number": "2.2.2",
+    "Subpart": "c",
+    "Requirement": "SOP covering boundary marker demarkation",
+    "Smallholder/Group": "Smallholder",
+    "Evidence": "Record of smallholder SOP training",
+    "Evidence format": "Record",
+    "Guidance": ""
+  },
+  {
+    "id": 18,
+    "Number": "2.2.3, 2.2.4",
+    "Subpart": "a, b, c, a, b",
+    "Requirement": "Register of current and past land disputes",
+    "Smallholder/Group": "Group",
+    "Evidence": "Land dispute register",
+    "Evidence format": "Document",
+    "Guidance": ""
+  },
+  {
+    "id": 19,
+    "Number": "2.2.5",
+    "Subpart": "a",
+    "Requirement": "SOP covering mapping of land disputes",
+    "Smallholder/Group": "Group",
+    "Evidence": "Record of management SOP training",
+    "Evidence format": "Record",
+    "Guidance": ""
+  },
+  {
+    "id": 20,
+    "Number": "2.2.5",
+    "Subpart": "b",
+    "Requirement": "Land dispute map",
+    "Smallholder/Group": "Group",
+    "Evidence": "Land dispute map",
+    "Evidence format": "Map",
+    "Guidance": ""
+  },
+  {
+    "id": 21,
+    "Number": "2.2.5",
+    "Subpart": "c",
+    "Requirement": "Evidence of resolution of land disputes",
+    "Smallholder/Group": "Group",
+    "Evidence": "Evidence of resolution of land disputes",
+    "Evidence format": "Document",
+    "Guidance": ""
+  },
+  {
+    "id": 22,
+    "Number": "2.2.6",
+    "Subpart": "a",
+    "Requirement": "SOP covering avoiding conflict",
+    "Smallholder/Group": "Group",
+    "Evidence": "Record of management SOP training",
+    "Evidence format": "Record",
+    "Guidance": ""
+  },
+  {
+    "id": 23,
+    "Number": "2.2.6",
+    "Subpart": "b",
+    "Requirement": "Evidence of confrontation or intimidation",
+    "Smallholder/Group": "-",
+    "Evidence": "External audit required",
+    "Evidence format": "-",
+    "Guidance": ""
+  },
+  {
+    "id": 24,
+    "Number": "2.3.1",
+    "Subpart": "a, b",
+    "Requirement": "SOP covering FPIC",
+    "Smallholder/Group": "Group",
+    "Evidence": "Record of management SOP training",
+    "Evidence format": "Record",
+    "Guidance": ""
+  },
+  {
+    "id": 25,
+    "Number": "2.3.1",
+    "Subpart": "c, e",
+    "Requirement": "Evidence FPIC process has followed SOP",
+    "Smallholder/Group": "-",
+    "Evidence": "External audit required",
+    "Evidence format": "-",
+    "Guidance": ""
+  },
+  {
+    "id": 26,
+    "Number": "2.3.1",
+    "Subpart": "d, f, g",
+    "Requirement": "Map showing legal, customary and user rights",
+    "Smallholder/Group": "Group",
+    "Evidence": "Map of legal, customary and user rights",
+    "Evidence format": "Map",
+    "Guidance": ""
+  },
+  {
+    "id": 27,
+    "Number": "2.3.2",
+    "Subpart": "a",
+    "Requirement": "Copies of negotiated agreements available",
+    "Smallholder/Group": "Group",
+    "Evidence": "Copies of agreements",
+    "Evidence format": "Document(s)",
+    "Guidance": ""
+  },
+  {
+    "id": 28,
+    "Number": "2.3.2",
+    "Subpart": "b, c",
+    "Requirement": "SOP covering responsible negotiations",
+    "Smallholder/Group": "Group",
+    "Evidence": "Record of management SOP training",
+    "Evidence format": "Record",
+    "Guidance": ""
+  },
+  {
+    "id": 29,
+    "Number": "2.3.3, 2.3.4",
+    "Subpart": "a, a, b, c",
+    "Requirement": "Evidence of negotiations with community",
+    "Smallholder/Group": "-",
+    "Evidence": "External audit required",
+    "Evidence format": "-",
+    "Guidance": ""
+  },
+  {
+    "id": 30,
+    "Number": "3.1.1",
+    "Subpart": "a, b, d",
+    "Requirement": "Business plan covering next 3 years",
+    "Smallholder/Group": "Group",
+    "Evidence": "Business plan",
+    "Evidence format": "Document",
+    "Guidance": "Updated annually?"
+  },
+  {
+    "id": 31,
+    "Number": "3.1.1",
+    "Subpart": "c, e",
+    "Requirement": "SOP covering annual review of business plan",
+    "Smallholder/Group": "Group",
+    "Evidence": "Record of management SOP training",
+    "Evidence format": "Record",
+    "Guidance": ""
+  },
+  {
+    "id": 32,
+    "Number": "3.1.2",
+    "Subpart": "a, b, d",
+    "Requirement": "Documents showing annual replanting plan",
+    "Smallholder/Group": "Group",
+    "Evidence": "Annual replanting plan",
+    "Evidence format": "Document",
+    "Guidance": "Updated annually"
+  },
+  {
+    "id": 33,
+    "Number": "3.1.2",
+    "Subpart": "c, e",
+    "Requirement": "SOP covering documentation of the replanting plan",
+    "Smallholder/Group": "Group",
+    "Evidence": "Record of management SOP training",
+    "Evidence format": "Record",
+    "Guidance": ""
+  },
+  {
+    "id": 34,
+    "Number": "4.1.1",
+    "Subpart": "a, b, c, e, f",
+    "Requirement": "SOP covering all estate operation",
+    "Smallholder/Group": "Group",
+    "Evidence": "Document showing SOP",
+    "Evidence format": "Document",
+    "Guidance": "Template from RSPO"
+  },
+  {
+    "id": 35,
+    "Number": "4.1.1",
+    "Subpart": "d",
+    "Requirement": "Evidence the SOP are implimented and understood",
+    "Smallholder/Group": "Smallholder",
+    "Evidence": "Record of smallholder SOP training",
+    "Evidence format": "Record",
+    "Guidance": ""
+  },
+  {
+    "id": 36,
+    "Number": "4.1.2",
+    "Subpart": "a, b, c",
+    "Requirement": "Revisions, implementations of SOP",
+    "Smallholder/Group": "-",
+    "Evidence": "Use of the system is sufficient",
+    "Evidence format": "-",
+    "Guidance": ""
+  },
+  {
+    "id": 37,
+    "Number": "4.1.3",
+    "Subpart": "a",
+    "Requirement": "Register of corrective actions and improvments",
+    "Smallholder/Group": "Group",
+    "Evidence": "Improvements register",
+    "Evidence format": "Document",
+    "Guidance": "Template from RSPO"
+  },
+  {
+    "id": 38,
+    "Number": "4.2.1",
+    "Subpart": "a, b",
+    "Requirement": "SOP covering good agriculture practises",
+    "Smallholder/Group": "Smallholder",
+    "Evidence": "Record of smallholder SOP training",
+    "Evidence format": "Record",
+    "Guidance": ""
+  },
+  {
+    "id": 39,
+    "Number": "4.2.2",
+    "Subpart": "a",
+    "Requirement": "Record of fertillizer input",
+    "Smallholder/Group": "Smallholder",
+    "Evidence": "Record of fertillizer input",
+    "Evidence format": "Document",
+    "Guidance": "Continuous"
+  },
+  {
+    "id": 40,
+    "Number": "4.2.2",
+    "Subpart": "b, c",
+    "Requirement": "Fertillizer use in agronomic reports",
+    "Smallholder/Group": "Smallholder",
+    "Evidence": "Agronomic report",
+    "Evidence format": "Document",
+    "Guidance": ""
+  },
+  {
+    "id": 41,
+    "Number": "4.2.3",
+    "Subpart": "a",
+    "Requirement": "SOP for tissue and soil sampling",
+    "Smallholder/Group": "Smallholder",
+    "Evidence": "Record of smallholder SOP training",
+    "Evidence format": "Record",
+    "Guidance": ""
+  },
+  {
+    "id": 42,
+    "Number": "4.2.3",
+    "Subpart": "b, c, d",
+    "Requirement": "Records of tissue and soil sampling",
+    "Smallholder/Group": "Smallholder",
+    "Evidence": "Record of tissue and soil sampline",
+    "Evidence format": "Document",
+    "Guidance": "Continuous"
+  },
+  {
+    "id": 43,
+    "Number": "4.2.4",
+    "Subpart": "a, b",
+    "Requirement": "Nutrient recycling strategy",
+    "Smallholder/Group": "Group",
+    "Evidence": "Nutrient recycling strategy",
+    "Evidence format": "Document",
+    "Guidance": ""
+  },
+  {
+    "id": 44,
+    "Number": "4.3.1",
+    "Subpart": "a",
+    "Requirement": "Maps of fragile soil areas",
+    "Smallholder/Group": "Smallholder",
+    "Evidence": "Maps of fragile soil areas",
+    "Evidence format": "Map",
+    "Guidance": ""
+  },
+  {
+    "id": 45,
+    "Number": "4.3.2",
+    "Subpart": "a, b",
+    "Requirement": "Management strategy for planting on slopes",
+    "Smallholder/Group": "Group",
+    "Evidence": "Management strategy for planting on slopes",
+    "Evidence format": "Document",
+    "Guidance": ""
+  },
+  {
+    "id": 46,
+    "Number": "4.3.2",
+    "Subpart": "c",
+    "Requirement": "Records of field inspections",
+    "Smallholder/Group": "Smallholder",
+    "Evidence": "Records of field inspections",
+    "Evidence format": "Document",
+    "Guidance": "Continuous"
+  },
+  {
+    "id": 47,
+    "Number": "4.3.3",
+    "Subpart": "a",
+    "Requirement": "Road maintenance programme",
+    "Smallholder/Group": "Group",
+    "Evidence": "Road maintenance programme",
+    "Evidence format": "Document",
+    "Guidance": ""
+  },
+  {
+    "id": 48,
+    "Number": "4.3.3",
+    "Subpart": "b",
+    "Requirement": "Road maintenance records",
+    "Smallholder/Group": "Group",
+    "Evidence": "Records of road maintenance",
+    "Evidence format": "Document",
+    "Guidance": "Continuous"
+  }
+]
