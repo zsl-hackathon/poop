@@ -430,6 +430,7 @@ function orderSrc(src, order) {
  * @param  {Boolean} specRunner - server spec runner html
  */
 function serve(isDev, specRunner) {
+  console.log('serve');
   var debugMode = '--debug';
   var nodeOptions = getNodeOptions(isDev);
 
