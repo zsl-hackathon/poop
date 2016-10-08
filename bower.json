@@ -29,7 +29,9 @@
     "toastr": "^2.1.2",
     "angular-animate": "^1.5.3",
     "angular-bootstrap": "^1.2.5",
-    "angular-material": "^1.1.1"
+    "angular-material": "^1.1.1",
+    "d3": "v3.5.17",
+    "radial-progress-chart": "^0.0.4"
   },
   "resolutions": {
     "angular": "1.5.3"
