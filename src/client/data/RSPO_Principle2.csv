@@ -1,0 +1,49 @@
+id,Number,Subpart,Requirement,Smallholder/Group,Evidence,Evidence format,Guidance
+1,1.1.1,a,List of company stakeholders,Group,List of company stakeholders,Document,
+2,1.1.1,"b, d, e, f, g, h, i",Stakeholder monitoring system,-,Use of the system is sufficient,-,
+3,1.1.1,c,Stakeholder verification,Group,Images of stakeholder proof of identity,Images,
+4,1.1.2,"a, b, c, d, e, f",SOP covering constructive response to stakeholders,Group,Record of management SOP training,Record,
+5,1.2.1,"a, b, c, d, e",Management document system,-,Use of the system is sufficient,-,
+6,1.3.1,"a, b",Ethical code of conduct policy,Group,Code of conduct,Document,Template from RSPO
+7,1.3.1,"c, d",Access to code of conduct,-,Use of the system is sufficient,-,
+8,2.1.1,"a, b",Complete list of legal requirements,Group,List of local legal requirements,Document,"Relevant legislation includes, but is not limited to: regulations governing land tenure and land-use rights, labour, agricultural practices (e.g. chemical use), environment (e.g. wildlife laws, pollution, environmental management and forestry laws), storage, transportation and processing practices. It also includes laws made pursuant to a country’s obligations under international laws or conventions (e.g. the Convention on Biological Diversity (CBD), ILO core Conventions and UN Guiding Principles on Business and Human Rights.
+9,2.1.2,a,List of management personel,Group,List of management personel,Document,
+10,2.1.2,"a, b",Accessable document system,-,Use of the system is sufficient,-,
+11,2.1.3,a,SOP covering anual legal audit,Group,Record of management SOP training,Record,
+12,2.1.4,a,SOP covering tracking changes in the law,Group,Record of management SOP training,Record,
+13,2.2.1,"a, c, d",Documents showing legal ownership or lease of land,Smallholder,Image of legal ownership/lease document,Image(s),
+14,2.2.1,b,Documents showing history of land tenure,-,Use of the system is sufficient,-,
+15,2.2.2,"a, d",Map showing location of boundaries,Smallholder,Map of smallholding,Map,
+16,2.2.2,"b, e",Physical boundary markers,Smallholder,Images of boundary markers,Image(s),
+17,2.2.2,c,SOP covering boundary marker demarkation,Smallholder,Record of smallholder SOP training,Record,
+18,"2.2.3, 2.2.4","a, b, c, a, b",Register of current and past land disputes,Group,Land dispute register,Document,
+19,2.2.5,a,SOP covering mapping of land disputes,Group,Record of management SOP training,Record,
+20,2.2.5,b,Land dispute map,Group,Land dispute map,Map,
+21,2.2.5,c,Evidence of resolution of land disputes,Group,Evidence of resolution of land disputes,Document,
+22,2.2.6,a,SOP covering avoiding conflict,Group,Record of management SOP training,Record,
+23,2.2.6,b,Evidence of confrontation or intimidation,-,External audit required,-,
+24,2.3.1,"a, b",SOP covering FPIC,Group,Record of management SOP training,Record,
+25,2.3.1,"c, e",Evidence FPIC process has followed SOP,-,External audit required,-,
+26,2.3.1,"d, f, g","Map showing legal, customary and user rights",Group,"Map of legal, customary and user rights",Map,
+27,2.3.2,a,Copies of negotiated agreements available,Group,Copies of agreements,Document(s),
+28,2.3.2,"b, c",SOP covering responsible negotiations,Group,Record of management SOP training,Record,
+29,"2.3.3, 2.3.4","a, a, b, c",Evidence of negotiations with community,-,External audit required,-,
+30,3.1.1,"a, b, d",Business plan covering next 3 years,Group,Business plan,Document,Updated annually?
+31,3.1.1,"c, e",SOP covering annual review of business plan,Group,Record of management SOP training,Record,
+32,3.1.2,"a, b, d",Documents showing annual replanting plan,Group,Annual replanting plan,Document,Updated annually
+33,3.1.2,"c, e",SOP covering documentation of the replanting plan,Group,Record of management SOP training,Record,
+34,4.1.1,"a, b, c, e, f",SOP covering all estate operation,Group,Document showing SOP,Document,Template from RSPO
+35,4.1.1,d,Evidence the SOP are implimented and understood,Smallholder,Record of smallholder SOP training,Record,
+36,4.1.2,"a, b, c","Revisions, implementations of SOP",-,Use of the system is sufficient,-,
+37,4.1.3,a,Register of corrective actions and improvments,Group,Improvements register,Document,Template from RSPO
+38,4.2.1,"a, b",SOP covering good agriculture practises,Smallholder,Record of smallholder SOP training,Record,
+39,4.2.2,a,Record of fertillizer input,Smallholder,Record of fertillizer input,Document,Continuous
+40,4.2.2,"b, c",Fertillizer use in agronomic reports,Smallholder,Agronomic report,Document,
+41,4.2.3,a,SOP for tissue and soil sampling,Smallholder,Record of smallholder SOP training,Record,
+42,4.2.3,"b, c, d",Records of tissue and soil sampling,Smallholder,Record of tissue and soil sampline,Document,Continuous
+43,4.2.4,"a, b",Nutrient recycling strategy,Group,Nutrient recycling strategy,Document,
+44,4.3.1,a,Maps of fragile soil areas,Smallholder,Maps of fragile soil areas,Map,
+45,4.3.2,"a, b",Management strategy for planting on slopes,Group,Management strategy for planting on slopes,Document,
+46,4.3.2,c,Records of field inspections,Smallholder,Records of field inspections,Document,Continuous
+47,4.3.3,a,Road maintenance programme,Group,Road maintenance programme,Document,
+48,4.3.3,b,Road maintenance records,Group,Records of road maintenance,Document,Continuous

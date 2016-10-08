@@ -10,8 +10,55 @@
 
     </div>
 
+  </div>
+
+  <div class="kanban-container" flex layout="row" style="justify-content:space-around;">
+
+    <div layout-fill layout-margin layout-padding layout="column">
+
+      <kanban-card ng-repeat="req in vm.data" ng-if="req.status==='todo'">
+        <h4>{{ req.Number }}</h4>
+        <button ng-click="vm.updateProgress(req)"><strong>></strong></button>
+        <span>{{ req.status }}</span>
+
+      </kanban-card>
+
+    </div>
+
+    <div layout-fill layout-margin layout-padding layout="column">
+
+      <kanban-card ng-repeat="req in vm.data" ng-if="req.status==='in progress'">
+        <h4>{{ req.Number }}</h4>
+        <button ng-click="vm.updateProgress(req)"><strong>></strong></button>
+        <span>{{ req.status }}</span>
+      </kanban-card>
+
+    </div>
+
+    <div layout-fill layout-margin layout-padding layout="column">
+
+      <kanban-card ng-repeat="req in vm.data" ng-if="req.status==='in review'">
+        <h4>{{ req.Number }}</h4>
+        <button ng-click="vm.updateProgress(req)"><strong>></strong></button>
+        <span>{{ req.status }}</span>
+      </kanban-card>
+
+    </div>
+
+    <div layout-fill layout-margin layout-padding layout="column">
+
+      <kanban-card ng-repeat="req in vm.data" ng-if="req.status==='complete'">
+        <h4>{{ req.Number }}</h4>
+        <button ng-click="vm.updateProgress(req)"><strong>></strong></button>
+        <span>{{ req.status }}</span>
+      </kanban-card>
+
+    </div>
 
 
   </div>
+
+
+
 
 </section>

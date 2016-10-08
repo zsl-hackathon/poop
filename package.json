@@ -9,10 +9,11 @@
     "test": "gulp test"
   },
   "dependencies": {
-    "bower": "1.7.9",
     "body-parser": "^1.8.2",
+    "bower": "1.7.9",
     "express": "^4.9.3",
     "morgan": "^1.1.1",
+    "papaparse": "^4.1.2",
     "serve-favicon": "^2.0.1"
   },
   "devDependencies": {
