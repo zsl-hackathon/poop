@@ -65,10 +65,10 @@
       }
 
     var colors = [
-      "#2eb82e",
-      "#ff9900",
-      "#00ccff"
-    ]
+      '#2eb82e',
+      '#ff9900',
+      '#00ccff'
+    ];
 
     d3.select('.status').selectAll('li')
       .data(data).enter()
