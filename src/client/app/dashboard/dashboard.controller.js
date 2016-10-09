@@ -5,9 +5,9 @@
     .module('app.dashboard')
     .controller('DashboardController', DashboardController);
 
-  DashboardController.$inject = ['$q', 'dataservice', '$http', 'logger'];
+  DashboardController.$inject = ['$q', 'dataservice', '$http', 'logger', 'd3'];
   /* @ngInject */
-  function DashboardController($q, dataservice, $http, logger) {
+  function DashboardController($q, dataservice, $http, logger, d3) {
     var vm = this;
 console.log("loaded");
     vm.title = 'Dashboard';
@@ -56,10 +56,10 @@ console.log("loaded");
       }
 
     var colors = [
-      "#2eb82e",
-      "#ff9900",
-      "#00ccff"
-    ]
+      '#2eb82e',
+      '#ff9900',
+      '#00ccff'
+    ];
 
     d3.select('.status').selectAll('li')
       .data(data).enter()
