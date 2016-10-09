@@ -1,0 +1,18 @@
+<md-content class="chart-inner-container" layout="column">
+
+	<div layout="row">
+		<div class="chart-info-container" layout="column">
+			<div flex class="plot-title">			
+				Parallel <br> Plot
+			</div>
+			<div flex class="chart-count">
+				Drag axes by labels to re-order
+				<!-- <div id="chart-count-text">#405</div> -->
+			</div>
+		</div>
+		<div flex layout="column">
+			<!-- <a href="http://bl.ocks.org/jasondavies/1341281">Parallel Plot</a> -->
+			<parallel-coordinates-chart width="{{width}}" height="{{height}}" highlight="highlight" filters="dimensions"  values="data"/>
+		</div>
+	</div>
+</md-content>
