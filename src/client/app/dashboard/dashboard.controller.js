@@ -5,9 +5,9 @@
     .module('app.dashboard')
     .controller('DashboardController', DashboardController);
 
-  DashboardController.$inject = ['$q', 'dataservice', '$http', 'logger'];
+  DashboardController.$inject = ['$scope', '$q', 'dataservice', '$http', '$mdDialog', 'logger'];
   /* @ngInject */
-  function DashboardController($q, dataservice, $http, logger) {
+  function DashboardController($scope, $q, dataservice, $http, $mdDialog, logger) {
     var vm = this;
 
     vm.title = 'Dashboard';
@@ -46,14 +46,14 @@
 
         var val = Math.random();
 
-        return val < 0.25 ? 'todo' : val < 0.5 ? 'in progress' : val < 0.75 ? 'in review' : 'complete';
+        return val < 0.25 ? 'To Do' : val < 0.5 ? 'In Progress' : val < 0.75 ? 'In Review' : 'Complete';
 
       }
 
       vm.updateProgress = function(req) {
         var index = vm.data.map(function(el) { return el.id }).indexOf(req.id);
 
-        var newStatus = req.status === 'todo' ? 'in progress' : req.status === 'in progress' ? 'in review' : 'complete';
+        var newStatus = req.status === 'To Do' ? 'In Progress' : req.status === 'In Progress' ? 'In Review' : 'Complete';
 
         vm.data[index].status = newStatus;
       }
@@ -111,6 +111,26 @@
     }
     function getRandomYou() {
       return Math.round(Math.random() * 40) + 30;
+    }
+
+    vm.showDialog = function(req) {
+       var parentEl = angular.element(document.body);
+       $mdDialog.show({
+         parent: parentEl,
+         // targetEvent: $event,
+         templateUrl: 'app/dashboard/partials/dialog.html',
+         locals: {
+           item: req
+         },
+         controller: DialogController
+      });
+      function DialogController($scope, $mdDialog, item) {
+        console.log(item);
+        $scope.item = item;
+        $scope.closeDialog = function() {
+          $mdDialog.hide();
+        }
+      }
     }
 
   }

@@ -16,7 +16,7 @@
 
     <div layout-fill layout-margin layout-padding layout="column">
 
-      <kanban-card ng-repeat="req in vm.data" ng-if="req.status==='todo'">
+      <kanban-card ng-repeat="req in vm.data" ng-if="req.status==='To Do'" ng-click="vm.showDialog(req)">
         <h4 class="req-number">{{ req.Number }}</h4>
         <img ng-src="{{ vm.icons[req.Number[0]].link}}">
         <p>{{ req.Requirement }}</p>
@@ -27,9 +27,12 @@
 
     </div>
 
+    <div class="divider">
+    </div>
+
     <div layout-fill layout-margin layout-padding layout="column">
 
-      <kanban-card ng-repeat="req in vm.data" ng-if="req.status==='in progress'">
+      <kanban-card ng-repeat="req in vm.data" ng-if="req.status==='In Progress'">
         <h4>{{ req.Number }}</h4>
         <img ng-src="{{ vm.icons[req.Number[0]].link}}">
         <p>{{ req.Requirement }}</p>
@@ -40,9 +43,12 @@
 
     </div>
 
+    <div class="divider">
+    </div>
+
     <div layout-fill layout-margin layout-padding layout="column">
 
-      <kanban-card ng-repeat="req in vm.data" ng-if="req.status==='in review'">
+      <kanban-card ng-repeat="req in vm.data" ng-if="req.status==='In Review'">
         <h4>{{ req.Number }}</h4>
         <img ng-src="{{ vm.icons[req.Number[0]].link}}">
         <p>{{ req.Requirement }}</p>
@@ -53,9 +59,12 @@
 
     </div>
 
+    <div class="divider">
+    </div>
+
     <div layout-fill layout-margin layout-padding layout="column">
 
-      <kanban-card ng-repeat="req in vm.data" ng-if="req.status==='complete'">
+      <kanban-card ng-repeat="req in vm.data" ng-if="req.status==='Complete'">
         <h4>{{ req.Number }}</h4>
         <img ng-src="{{ vm.icons[req.Number[0]].link}}">
         <p>{{ req.Requirement }}</p>
