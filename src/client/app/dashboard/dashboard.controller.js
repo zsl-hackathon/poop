@@ -5,22 +5,25 @@
     .module('app.dashboard')
     .controller('DashboardController', DashboardController);
 
-  DashboardController.$inject = ['$q', 'dataservice', '$http', 'logger'];
+  DashboardController.$inject = ['$scope', '$q', 'dataservice', '$http', '$mdDialog', 'logger'];
   /* @ngInject */
-  function DashboardController($q, dataservice, $http, logger) {
+  function DashboardController($scope, $q, dataservice, $http, $mdDialog, logger) {
     var vm = this;
-console.log("loaded");
+
     vm.title = 'Dashboard';
+
     var data = [
-        {link: 'http://imgur.com/aOtkeqT.png'},
-        {link: 'http://imgur.com/WhH7SYd.png'},
-        {link: 'http://imgur.com/rnYLMVC.png'},
-        {link: 'http://imgur.com/xVw0yQ2.png'},
-        {link: 'http://imgur.com/GN9wzIb.png'},
-        {link: 'http://imgur.com/aTPVPVO.png'},
-        {link: 'http://imgur.com/d4SPWnS.png'},
-        {link: 'http://imgur.com/lMemDNl.png'}
+        { requirement: 'transparency', link: 'http://imgur.com/aOtkeqT.png'},
+        { requirement: 'compliance', link: 'http://imgur.com/WhH7SYd.png'},
+        { requirement: 'commitment', link: 'http://imgur.com/rnYLMVC.png'},
+        { requirement: 'best practice', link: 'http://imgur.com/xVw0yQ2.png'},
+        { requirement: 'responsibility', link: 'http://imgur.com/GN9wzIb.png'},
+        { requirement: 'employees', link: 'http://imgur.com/aTPVPVO.png'},
+        { requirement: 'development', link: 'http://imgur.com/d4SPWnS.png'},
+        { requirement: 'improvement', link: 'http://imgur.com/lMemDNl.png'}
       ];
+
+    vm.icons = data;
 
     $http.get('data/RSPO_Principle2.json')
       .then(function(result) {
@@ -43,14 +46,14 @@ console.log("loaded");
 
         var val = Math.random();
 
-        return val < 0.25 ? 'todo' : val < 0.5 ? 'in progress' : val < 0.75 ? 'in review' : 'complete';
+        return val < 0.25 ? 'To Do' : val < 0.5 ? 'In Progress' : val < 0.75 ? 'In Review' : 'Complete';
 
       }
 
       vm.updateProgress = function(req) {
         var index = vm.data.map(function(el) { return el.id }).indexOf(req.id);
 
-        var newStatus = req.status === 'todo' ? 'in progress' : req.status === 'in progress' ? 'in review' : 'complete';
+        var newStatus = req.status === 'To Do' ? 'In Progress' : req.status === 'In Progress' ? 'In Review' : 'Complete';
 
         vm.data[index].status = newStatus;
       }
@@ -64,7 +67,6 @@ console.log("loaded");
     d3.select('.status').selectAll('li')
       .data(data).enter()
       .append('li').on('mouseover', function (d) {
-        console.log("hey")
       })
       .append('div')
       .append('img').attr('src', function(d) {
@@ -109,6 +111,26 @@ console.log("loaded");
     }
     function getRandomYou() {
       return Math.round(Math.random() * 40) + 30;
+    }
+
+    vm.showDialog = function(req) {
+       var parentEl = angular.element(document.body);
+       $mdDialog.show({
+         parent: parentEl,
+         // targetEvent: $event,
+         templateUrl: 'app/dashboard/partials/dialog.html',
+         locals: {
+           item: req
+         },
+         controller: DialogController
+      });
+      function DialogController($scope, $mdDialog, item) {
+        console.log(item);
+        $scope.item = item;
+        $scope.closeDialog = function() {
+          $mdDialog.hide();
+        }
+      }
     }
 
   }
