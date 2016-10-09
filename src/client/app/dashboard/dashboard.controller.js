@@ -35,7 +35,6 @@
 
     dataservice.getSmallholderCards(/* { status: dataservice.CARD_STATUS.COMPLETE } */)
       .then(function(data) {
-        console.log(data);
         vm.data = data;
         createProgressChart();
         updateSmallholderProgress();
@@ -147,7 +146,6 @@
          controller: DialogController
       });
       function DialogController($scope, $mdDialog, item) {
-        console.log(item);
         $scope.item = item;
         $scope.closeDialog = function() {
           $mdDialog.hide();
