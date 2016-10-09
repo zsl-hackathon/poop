@@ -12,10 +12,20 @@
   <div ng-if="item['Evidence format'] && item['Evidence format'] !== '-'">
     <span style="font-weight:bold;">Evidence format: </span>
     <br />
-    <span>{{ item["Evidence format"] }}</span>
+    <div>
+        <span style="color:green" ng-if="item.uploadedDocument">
+          <strong>✔</strong>
+        </span>
+        <span ng-if="item.uploadedDocument == undefined">
+          <img ng-click="uploadDocument(item.id)" src="images/upload.png" style="height:20px; width:20px; margin-right:5px;" />
+        </span>
+        <span>{{ item["Evidence format"] }}</span>
+    </div>
   </div>
 
-  <span class="item-status" ng-if="item.status !== 'Complete'">{{ item.status }}</span>
+  <span class="item-status" ng-if="item.status !== 'Complete'">
+    {{ item.status }}
+  </span>
 
   <div ng-if="item.status==='Complete'">
     <h4><strong>Congratulations! You have completed this requirement</strong></h4>
