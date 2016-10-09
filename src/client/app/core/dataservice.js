@@ -29,23 +29,59 @@
         }
 
         cards = data.map(function(el) {
-          el.status = el['Smallholder/Group'] == '-' ? CARD_STATUS.COMPLETE : randomStatus();
+          el.status = el['Smallholder/Group'] == CARD_OWNER_TYPE.NONE ? CARD_STATUS.COMPLETE : randomStatus();
           return el;
         });
     });
 
     var service = {
+      getProgressData: getProgressData,
       getPeople: getPeople,
       getMessageCount: getMessageCount,
       getCards: getCards,
       getSmallholderCards: getSmallholderCards,
       getGroupCards: getGroupCards,
+      updateProgress: updateProgress,
+      getSmallholderProgress: getSmallholderProgress,
+      getGroupProgress: getGroupProgress,
+      uploadDocument: uploadDocument,
       CARD_STATUS: CARD_STATUS
     };
 
     return service;
 
+    function uploadDocument(id) {
+      return getSmallholderCards({id: id}).then(function(cards) {
+        cards[0].uploadedDocument = true;
+      });
+    }
+    function getGroupProgress() {
+      return getGroupCards().then(function(cards) {
+        return getUserProgress(cards);
+      });
+    }
+    function getUserProgress(userCards) {
+      return userCards.filter(function(card) {
+        return card.status === CARD_STATUS.COMPLETE;
+      }).length / userCards.length * 100;
+    }
+
+    function getSmallholderCards(filterBy) {
+      filterBy = filterBy || {};
+      filterBy['Smallholder/Group'] = function(v) {
+        return v == CARD_OWNER_TYPE.SMALLHOLDER || v == CARD_OWNER_TYPE.NONE;
+      };
+      return getCards(filterBy);
+    }
+
     function getMessageCount() { return $q.when(72); }
+
+    function getProgressData() {
+      $http.get('/data/progress_data.csv')
+      .then(function(res) {
+        console.log(res);
+      });
+    }
 
     function getPeople() {
       return $http.get('/api/people')
@@ -77,6 +113,22 @@
       });
     }
 
+    function getSmallholderProgress() {
+      return getSmallholderCards().then(function(cards) {
+        return getUserProgress(cards);
+      });
+    }
+    function getGroupProgress() {
+      return getGroupCards().then(function(cards) {
+        return getUserProgress(cards);
+      });
+    }
+    function getUserProgress(userCards) {
+      return userCards.filter(function(card) {
+        return card.status === CARD_STATUS.COMPLETE;
+      }).length / userCards.length * 100;
+    }
+
     function getSmallholderCards(filterBy) {
       filterBy = filterBy || {};
       filterBy['Smallholder/Group'] = function(v) {
@@ -97,6 +149,24 @@
       return cardsRetriever.then(function() {
         return findByMatchingProperties(cards, filterBy || {});
       });
+    }
+
+    function getNextStatus(oldStatus) {
+      return oldStatus === CARD_STATUS.TO_DO ? CARD_STATUS.IN_PROGRESS : oldStatus === CARD_STATUS.IN_PROGRESS ? CARD_STATUS.IN_REVIEW : CARD_STATUS.COMPLETE;
+    }
+
+    function updateProgress(cardId) {
+      var index = cards.findIndex(function(card) {
+        return card.id == cardId;
+      });
+      if (index != undefined && index != null) {
+        cards[index].status = getNextStatus(cards[index].status);
+        console.log("Card updated: ", cards[index]);
+        return cards[index];
+      }
+      else {
+        return exception.catcher('Card to update not found');
+      }
     }
   }
 })();
