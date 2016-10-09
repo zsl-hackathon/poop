@@ -23,7 +23,14 @@
         // { requirement: 'improvement', link: 'http://imgur.com/lMemDNl.png'}
       ];
 
-    vm.icons = data;
+    vm.evidenceTypes =  [
+      { name: 'record', link: ' ' },
+      { name: 'document', link: ' ' },
+      { name: 'image(s)', link: ' ' },
+      { name: 'map', link: ' ' },
+
+
+    ]
 
     $http.get('data/RSPO_Principle2.json')
       .then(function(result) {

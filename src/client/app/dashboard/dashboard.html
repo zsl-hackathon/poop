@@ -10,11 +10,11 @@
 
         Tamquam cotidieque ex cum, ne meliore gubergren mea. Vel solum paulo te. Id postea appetere repudiandae cum, quodsi cotidieque repudiandae ne duo, ex vel illum pertinax. Est
         dicit vidisse minimum ut, posse sonet ea vix. Per ex principes constituam necessitatibus, paulo saperet probatus te ius, ad sed graeci officiis torquatos.
-         
-      
+
+
        </div>
     </div>
-    <div flex="33"> 
+    <div flex="33">
       <div flex="50" layout="row">
       <ng-md-icon icon="play_arrow" style="fill: #2b2b2b"></ng-md-icon><h2>My Progress</h2>
       </div>
@@ -26,13 +26,16 @@
     <div layout="row" flex="15">
       <ng-md-icon icon="play_arrow" style="fill: #2b2b2b"></ng-md-icon><h2>Workflow</h2>
     </div>
-    <div layout="row">"
+    <div layout="row">
 
       <div layout-fill layout-margin layout-padding layout="column">
 
         <kanban-card ng-repeat="req in vm.data" ng-if="req.status==='To Do'">
           <h4 class="req-number">{{ req.Number }}</h4>
-          <img ng-src="{{ vm.icons[req.Number[0]].link}}">
+          <ng-md-icon icon="insert_drive_file" ng-if="req['Evidence format']==='Document'">Document</ng-md-icon>
+          <ng-md-icon icon="insert_photo" ng-if="req['Evidence format']==='Image(s)'" class="material-icons">Image(s)</ng-md-icon>
+          <ng-md-icon icon="save" ng-if="req['Evidence format']==='Record'" class="material-icons">Record</ng-md-icon>
+          <ng-md-icon icon="map" ng-if="req['Evidence format']==='Map'" class="material-icons">Map</ng-md-icon>
           <p>{{ req.Requirement }}</p>
           <button ng-click="vm.updateProgress(req);"><strong>></strong></button>
           <a><span class="more-info" ng-click="vm.showDialog(req)">More Information</span></a>
@@ -49,7 +52,10 @@
 
         <kanban-card ng-repeat="req in vm.data" ng-if="req.status==='In Progress'">
           <h4 class="req-number">{{ req.Number }}</h4>
-          <img ng-src="{{ vm.icons[req.Number[0]].link}}">
+          <ng-md-icon icon="insert_drive_file" ng-if="req['Evidence format']==='Document'">Document</ng-md-icon>
+          <ng-md-icon icon="insert_photo" ng-if="req['Evidence format']==='Image(s)'" class="material-icons">Image(s)</ng-md-icon>
+          <ng-md-icon icon="save" ng-if="req['Evidence format']==='Record'" class="material-icons">Record</ng-md-icon>
+          <ng-md-icon icon="map" ng-if="req['Evidence format']==='Map'" class="material-icons">Map</ng-md-icon>
           <p>{{ req.Requirement }}</p>
           <button ng-click="vm.updateProgress(req)"><strong>></strong></button>
           <a><span class="more-info" ng-click="vm.showDialog(req)">More Information</span></a>
@@ -66,7 +72,10 @@
 
         <kanban-card ng-repeat="req in vm.data" ng-if="req.status==='In Review'">
           <h4 class="req-number">{{ req.Number }}</h4>
-          <img ng-src="{{ vm.icons[req.Number[0]].link}}">
+          <ng-md-icon icon="insert_drive_file" ng-if="req['Evidence format']==='Document'">Document</ng-md-icon>
+          <ng-md-icon icon="insert_photo" ng-if="req['Evidence format']==='Image(s)'" class="material-icons">Image(s)</ng-md-icon>
+          <ng-md-icon icon="save" ng-if="req['Evidence format']==='Record'" class="material-icons">Record</ng-md-icon>
+          <ng-md-icon icon="map" ng-if="req['Evidence format']==='Map'" class="material-icons">Map</ng-md-icon>
           <p>{{ req.Requirement }}</p>
           <button ng-click="vm.updateProgress(req)"><strong>></strong></button>
           <a><span class="more-info" ng-click="vm.showDialog(req)">More Information</span></a>
@@ -83,7 +92,10 @@
 
         <kanban-card ng-repeat="req in vm.data" ng-if="req.status==='Complete'">
           <h4 class="req-number">{{ req.Number }}</h4>
-          <img ng-src="{{ vm.icons[req.Number[0]].link}}">
+          <ng-md-icon icon="insert_drive_file" ng-if="req['Evidence format']==='Document'">Document</ng-md-icon>
+          <ng-md-icon icon="insert_photo" ng-if="req['Evidence format']==='Image(s)'" class="material-icons">Image(s)</ng-md-icon>
+          <ng-md-icon icon="save" ng-if="req['Evidence format']==='Record'" class="material-icons">Record</ng-md-icon>
+          <ng-md-icon icon="map" ng-if="req['Evidence format']==='Map'" class="material-icons">Map</ng-md-icon>
           <p>{{ req.Requirement }}</p>
           <button ng-disabled="true" style="color:green"><strong>✔</strong></button>
           <a><span class="more-info" ng-click="vm.showDialog(req)">More Information</span></a>
@@ -97,7 +109,7 @@
   </div>
 
 
-  
+
 
 
 
