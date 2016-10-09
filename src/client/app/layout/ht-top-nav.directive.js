@@ -18,12 +18,17 @@
       templateUrl: 'app/layout/ht-top-nav.html'
     };
 
-    TopNavController.$inject = ['$scope'];
+    TopNavController.$inject = ['$scope', '$state'];
 
     /* @ngInject */
-    function TopNavController($scope) {
+    function TopNavController($scope, $state) {
       var vm = this;
       $scope.isCollapsed = true;
+
+      vm.goToTeamView = function(){
+        // console.log('hello');
+        $state.go('teamview')
+      };
     }
 
     return directive;

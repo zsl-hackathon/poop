@@ -142,9 +142,11 @@
         $scope.item = item;
         $scope.closeDialog = function() {
           $mdDialog.hide();
-        }
+        };
       }
-    }
+    };
+
+
 
   }
 })();
