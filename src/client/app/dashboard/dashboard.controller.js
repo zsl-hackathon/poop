@@ -5,11 +5,11 @@
     .module('app.dashboard')
     .controller('DashboardController', DashboardController);
 
-  DashboardController.$inject = ['$q', 'dataservice', 'logger'];
+  DashboardController.$inject = ['$q', 'dataservice', '$http', 'logger'];
   /* @ngInject */
-  function DashboardController($q, dataservice, logger) {
+  function DashboardController($q, dataservice, $http, logger) {
     var vm = this;
-
+console.log("loaded");
     vm.title = 'Dashboard';
     var data = [
         {link: 'http://imgur.com/aOtkeqT.png'},
@@ -21,6 +21,39 @@
         {link: 'http://imgur.com/d4SPWnS.png'},
         {link: 'http://imgur.com/lMemDNl.png'}
       ];
+
+    $http.get('data/RSPO_Principle2.json')
+      .then(function(result) {
+
+        var data = result.data;
+
+        data = data.map(function(el) {
+          el.status = randomStatus();
+          return el;
+        });
+
+        console.log(data);
+
+        vm.data = data;
+
+      });
+
+
+      function randomStatus() {
+
+        var val = Math.random();
+
+        return val < 0.25 ? 'todo' : val < 0.5 ? 'in progress' : val < 0.75 ? 'in review' : 'complete';
+
+      }
+
+      vm.updateProgress = function(req) {
+        var index = vm.data.map(function(el) { return el.id }).indexOf(req.id);
+
+        var newStatus = req.status === 'todo' ? 'in progress' : req.status === 'in progress' ? 'in review' : 'complete';
+
+        vm.data[index].status = newStatus;
+      }
 
     var colors = [
       "#2eb82e",
@@ -77,5 +110,6 @@
     function getRandomYou() {
       return Math.round(Math.random() * 40) + 30;
     }
+
   }
 })();
