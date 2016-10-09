@@ -5,9 +5,9 @@
     .module('app.dashboard')
     .controller('DashboardController', DashboardController);
 
-  DashboardController.$inject = ['$q', 'dataservice', '$http', 'logger', 'd3'];
+  DashboardController.$inject = ['$q', 'dataservice', '$http', 'logger'];
   /* @ngInject */
-  function DashboardController($q, dataservice, $http, logger, d3) {
+  function DashboardController($q, dataservice, $http, logger) {
     var vm = this;
 console.log("loaded");
     vm.title = 'Dashboard';
