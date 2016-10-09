@@ -9,6 +9,7 @@
   /* @ngInject */
   function DashboardController($scope, $q, dataservice, $http, $timeout, $mdDialog, logger) {
     var vm = this;
+    var progressChart;
 
     vm.title = 'Dashboard';
 
@@ -35,76 +36,98 @@
     dataservice.getSmallholderCards(/* { status: dataservice.CARD_STATUS.COMPLETE } */)
       .then(function(data) {
         vm.data = data;
+        createProgressChart();
+        updateSmallholderProgress();
       });
 
 
       vm.updateProgress = function(req) {
-        var index = vm.data.map(function(el) { return el.id }).indexOf(req.id);
-
-        var newStatus = req.status === 'To Do' ? 'In Progress' : req.status === 'In Progress' ? 'In Review' : 'Complete';
-
-        // $timeout(function() {
-          vm.data[index].status = newStatus;
-        // }, 500);
-
-        if (newStatus === 'Complete') {
+        var newCard = dataservice.updateProgress(req.id);
+        if (newCard.status === dataservice.CARD_STATUS.COMPLETE) {
           vm.showDialog(req);
         }
+        updateSmallholderProgress();
       }
 
-    var colors = [
-      '#89bf4a',
-      '#fdb813',
-      '#ee7813'
-    ];
+    function updateSmallholderProgress() {
+        dataservice.getSmallholderProgress().then(function(progress) {
+          console.log("Progress: ", progress);
+          var chart = getProgressChart();
+          chart.update([getRandomBest(), getRandomAvg(), progress]);
+        });
+    }
 
-    d3.select('.status').selectAll('li')
-      .data(data).enter()
-      .append('li').on('mouseover', function (d) {
-      })
-      .append('div')
-      .append('img').attr('src', function(d) {
-      return d.link;
-    })
-      .attr('height', 35)
-      .each(function (d, i) {
-      d.series = [
-        {
-          value: getRandomBest(),
-          color: colors[0]
-        },
-        {
-          value: getRandomAvg(),
-          color: colors[1]
-        },
-        {
-          value: getRandomYou(),
-          color: colors[2]
-        }
+    function createProgressChart() {
+      var colors = [
+        '#89bf4a',
+        '#fdb813',
+        '#ee7813'
       ];
-      new RadialProgressChart(this.parentNode, {
-        max: 100,
-        diameter: 500,
-        shadow: {
-          width: 0
-        },
-        stroke: {
-          width: 100,
-          gap: 20
-        },
-        series: d.series
-      });
-    });
 
+      d3.select('.status').selectAll('li')
+        .data(data).enter()
+        .append('li').on('mouseover', function (d) {
+        })
+        .append('div')
+        .append('img').attr('src', function(d) {
+          return d.link;
+        })
+        .attr('height', 35)
+        .each(function (d, i) {
+          d.series = [
+            {
+              value: getRandomBest(),
+              color: colors[0]
+            },
+            {
+              value: getRandomAvg(),
+              color: colors[1]
+            },
+            {
+              value: 0,
+              color: colors[2]
+            }
+          ];
+          getProgressChart(d, this.parentNode);
+        });
+    }
+
+    function getProgressChart(data, parentNode) {
+      if (!progressChart) {
+        progressChart = new RadialProgressChart(parentNode, {
+          max: 100,
+          diameter: 500,
+          shadow: {
+            width: 0
+          },
+          stroke: {
+            width: 100,
+            gap: 20
+          },
+          series: data.series
+        });
+      }
+      return progressChart;
+    }
+
+    function getProgressCircle(i) {
+      return d3.select('.status').select('g').selectAll('g')[i];
+    }
+
+    var _best;
     // Random int between 20-80
     function getRandomBest() {
-      return Math.round(Math.random() * 30) + 70;
+      if (!_best) {
+        _best = Math.round(Math.random() * 30) + 70;
+      }
+      return _best;
     }
+    var _avg;
     function getRandomAvg() {
-      return Math.round(Math.random() * 60) + 10;
-    }
-    function getRandomYou() {
-      return Math.round(Math.random() * 40) + 30;
+      if (!_avg) {
+        _avg = Math.round(Math.random() * 60) + 10;
+      }
+      return _avg;
     }
 
     vm.showDialog = function(req) {
@@ -125,8 +148,5 @@
         };
       }
     };
-
-
-
   }
 })();
