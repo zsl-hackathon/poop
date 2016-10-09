@@ -1,20 +1,17 @@
-<nav flex class="navbar navbar-fixed-top navbar-inverse" style="color: white">
-  <div class="navbar-header" layout="row">
-    <div>
+<nav flex class="navbar navbar-fixed-top" layout="row" style="color: white">
+  <div flex="5"></div>
+  <div flex="80">
       <h1>{{vm.navline.title}}</h1>
-      <a class="btn navbar-btn navbar-toggle" ng-click="isCollapsed = !isCollapsed">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </a>
-        </div>
-
     </div>
-      <div flex layout = "row" layout-align = "end center">
-        <div flex="75"> </div>
-        <ng-md-icon icon="account_box" style="fill: #ffffff" size="52" ></ng-md-icon>
-        <h3 class="white-text">Firstname Lastname</h3>
+  <!--<div layout = "row" layout-align="end-center" >-->
+    <!--<div flex="75"> </div>-->
+    <div style="width:50px"> 
+      <ng-md-icon icon="account_box" style="fill: #ffffff" size="44"></ng-md-icon>
+    </div >
+    <div layout-align="end-center">
+      <h3 class="white-text">Firstname Lastname</h3>
+    </div>
       <!--<md-button class="md-primary md-raised login-btn pull" style=>Log in</md-button>-->
-    </div>
+    <!--</div>-->
 
 </nav>

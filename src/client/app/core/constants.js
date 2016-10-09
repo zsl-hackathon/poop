@@ -5,5 +5,6 @@
   angular
     .module('app.core')
     .constant('toastr', toastr)
+    .constant('d3', d3)
     .constant('moment', moment);
 })();
