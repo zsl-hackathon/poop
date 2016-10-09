@@ -35,6 +35,7 @@
     });
 
     var service = {
+      getProgressData: getProgressData,
       getPeople: getPeople,
       getMessageCount: getMessageCount,
       getCards: getCards,
@@ -46,6 +47,13 @@
     return service;
 
     function getMessageCount() { return $q.when(72); }
+
+    function getProgressData() {
+      $http.get('/data/progress_data.csv')
+      .then(function(res) {
+        console.log(res);
+      });
+    }
 
     function getPeople() {
       return $http.get('/api/people')
