@@ -5,9 +5,9 @@
     .module('app.dashboard')
     .controller('DashboardController', DashboardController);
 
-  DashboardController.$inject = ['$scope', '$q', 'dataservice', '$http', '$mdDialog', 'logger'];
+  DashboardController.$inject = ['$scope', '$q', 'dataservice', '$http', '$timeout', '$mdDialog', 'logger'];
   /* @ngInject */
-  function DashboardController($scope, $q, dataservice, $http, $mdDialog, logger) {
+  function DashboardController($scope, $q, dataservice, $http, $timeout, $mdDialog, logger) {
     var vm = this;
 
     vm.title = 'Dashboard';
@@ -55,7 +55,13 @@
 
         var newStatus = req.status === 'To Do' ? 'In Progress' : req.status === 'In Progress' ? 'In Review' : 'Complete';
 
-        vm.data[index].status = newStatus;
+        // $timeout(function() {
+          vm.data[index].status = newStatus;
+        // }, 500);
+
+        if (newStatus === 'Complete') {
+          vm.showDialog(req);
+        }
       }
 
     var colors = [
