@@ -23,7 +23,14 @@
         // { requirement: 'improvement', link: 'http://imgur.com/lMemDNl.png'}
       ];
 
-    vm.icons = data;
+    vm.evidenceTypes =  [
+      { name: 'record', link: ' ' },
+      { name: 'document', link: ' ' },
+      { name: 'image(s)', link: ' ' },
+      { name: 'map', link: ' ' },
+
+
+    ]
 
     dataservice.getSmallholderCards(/* { status: dataservice.CARD_STATUS.COMPLETE } */)
       .then(function(data) {
