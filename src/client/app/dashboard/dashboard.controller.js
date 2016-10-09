@@ -25,30 +25,12 @@
 
     vm.icons = data;
 
-    $http.get('data/RSPO_Principle2.json')
-      .then(function(result) {
-
-        var data = result.data;
-
-        data = data.map(function(el) {
-          el.status = randomStatus();
-          return el;
-        });
-
+    dataservice.getSmallholderCards(/* { status: dataservice.CARD_STATUS.COMPLETE } */)
+      .then(function(data) {
         console.log(data);
-
         vm.data = data;
-
       });
 
-
-      function randomStatus() {
-
-        var val = Math.random();
-
-        return val < 0.25 ? 'To Do' : val < 0.5 ? 'In Progress' : val < 0.75 ? 'In Review' : 'Complete';
-
-      }
 
       vm.updateProgress = function(req) {
         var index = vm.data.map(function(el) { return el.id }).indexOf(req.id);
