@@ -5,7 +5,8 @@
     'app.core',
     'app.dashboard',
     'app.layout',
-    'ngMaterial'
+    'ngMaterial', 
+    'ngMdIcons'
   ]);
 
 })();

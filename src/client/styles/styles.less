@@ -35,10 +35,11 @@ input, select {
 
 
 .navbar * {
-    background-image: none !important;
+    // background-image: none !important;
     -webkit-text-shadow: none !important;
     -ms-text-shadow: none !important;
     text-shadow: none !important;
+    background-color: @color_orange;
 }
 
 form * {
@@ -79,7 +80,7 @@ input[type="radio"], input[type="checkbox"] {
 body {
     font-size: 13px;
     line-height: 23px;
-    color: #666;
+    // color: #666;
     background: #111;
     padding-top: 45px;
     -webkit-font-smoothing: antialiased;
@@ -94,7 +95,7 @@ body {
 h1, h2, h3, h4, h5, h6 {
     padding: 2px 0;
     margin: 2px 0;
-    color: #777;
+    // color: #777;
     font-weight: 400;
 }
 
@@ -129,12 +130,12 @@ p {
 }
 
 a {
-    color: #333;
+    // color: #333;
     text-decoration: none !important;
 }
 
     a:hover {
-        color: #888;
+        // color: #888;
         text-decoration: none;
     }
 
@@ -201,7 +202,7 @@ a.btn {
 /* Button colors */
 
 .btn.btn-primary {
-    background: @color_blue !important;
+    background: @color_green !important;
 }
 
     .btn.btn-primary:hover {
@@ -532,10 +533,11 @@ form {
 /* Navbar */
 
 .navbar {
-    background: #000;
+    background-color: @color_orange;
 }
 
     .navbar .container {
+        background-color: @color_orange;
         width: 97% !important;
     }
 
@@ -1291,85 +1293,6 @@ form {
 
 /*#endregion */
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*#region Override background color theme */
-
-/*For Bootstrap 3*/
-.nav, .pagination, .carousel, .panel-title a { cursor: pointer; }
-
-body {
-    background-color: #FFF;
-}
-
-.navbar-inverse {
-    background-color: #333;
-}
-
-.sidebar-widget form {
-    margin: 0em -1em;
-}
-
-.sidebar .navi > li > a {
-    background-color: #333 !important;
-}
-
-.sidebar .navi li ul li a {
-    color: #fff;
-}
-
-    .sidebar .navi li ul li a:hover {
-        color: @color_lightblue;
-    }
-
-    .sidebar .navi li ul li a:disabled {
-        color: #999;
-    }
-
-.navbar-inverse .btn-navbar {
-    background-color: #333;
-}
-
-    .navbar-inverse .btn-navbar:hover {
-        background-color: #333;
-    }
-
-.sidebar {
-    margin-top: -2px;
-}
-
-    .sidebar .sidebar-inner {
-        background-color: #333;
-    }
-
-.sidebar-filler {
-    z-index: -1;
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100%;
-    background-color: #333;
-    width: 230px;
-}
-
-/*#endregion */
-
 /* #region Main Styles */
 
 ul.image-group {
@@ -1526,6 +1449,7 @@ small {
     /*background: url(../images/gg.png) no-repeat left top !important;*/
     margin: 0 1em;
     height: 45px;
+    background-color: @color_orange;
 }
 
 .navbar .brand-title {
@@ -2002,3 +1926,7 @@ ul.status li svg {
   font-size: 14px;
   font-weight: 300;
 }
+
+.white-text {
+    color: @color_white;
+    }
