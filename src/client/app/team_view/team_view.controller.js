@@ -15,7 +15,7 @@
 
         ////////////////
 
-        function activate() { 
+        function activate() {
                 $http.get('data/RSPO_Principle2.json')
                 .then(function(result) {
 
@@ -42,6 +42,13 @@
 
                 });
         }
+
+
+    dataservice.getGroupCards(/* { status: dataservice.CARD_STATUS.COMPLETE } */)
+      .then(function(data) {
+        console.log("MANAGER: ", data);
+        vm.data = data;
+      });
 
         function randomStatus() {
 
