@@ -1906,6 +1906,8 @@ kanban-card {
   h4 {
     display: inline-block;
     width: 70%;
+    margin-top: 0;
+    padding-top: 0;
   }
 
   img {
@@ -1913,7 +1915,13 @@ kanban-card {
     float: right;
   }
 
-  span {
+  span.more-info {
+    position: absolute;
+    left: 10px;
+    bottom: 0;
+  }
+
+  span.item-status {
     position: absolute;
     right: 10px;
     bottom: 0;
@@ -1932,10 +1940,40 @@ kanban-card {
 
 .requirement-dialog {
 
-  span {
+  span.close-dialog {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  span.more-info {
+    position: absolute;
+    left: 10;
+    bottom: 0;
+  }
+
+  span.item-status {
     position: absolute;
     right: 10px;
     bottom: 0;
+  }
+
+  span.completed {
+    display: inline-block;
+    width: 70%;
+  }
+
+  img {
+    display:inline-block;
+    width: 100px;
+    float: left;
+    margin-left: 0;
+    padding-left: 0;
+  }
+
+  h2 {
+    margin-top: 0;
+    padding-top: 0;
   }
 
 }

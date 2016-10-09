@@ -13,12 +13,13 @@
 
     <div layout-fill layout-margin layout-padding layout="column">
 
-      <kanban-card ng-repeat="req in vm.data" ng-if="req.status==='To Do'" ng-click="vm.showDialog(req)">
+      <kanban-card ng-repeat="req in vm.data" ng-if="req.status==='To Do'">
         <h4 class="req-number">{{ req.Number }}</h4>
         <img ng-src="{{ vm.icons[req.Number[0]].link}}">
         <p>{{ req.Requirement }}</p>
-        <button ng-click="vm.updateProgress(req)"><strong>></strong></button>
-        <span>{{ req.status }}</span>
+        <button ng-click="vm.updateProgress(req);"><strong>></strong></button>
+        <a><span class="more-info" ng-click="vm.showDialog(req)">More Information</span></a>
+        <span class="item-status">{{ req.status }}</span>
 
       </kanban-card>
 
@@ -30,11 +31,12 @@
     <div layout-fill layout-margin layout-padding layout="column">
 
       <kanban-card ng-repeat="req in vm.data" ng-if="req.status==='In Progress'">
-        <h4>{{ req.Number }}</h4>
+        <h4 class="req-number">{{ req.Number }}</h4>
         <img ng-src="{{ vm.icons[req.Number[0]].link}}">
         <p>{{ req.Requirement }}</p>
         <button ng-click="vm.updateProgress(req)"><strong>></strong></button>
-        <span>{{ req.status }}</span>
+        <a><span class="more-info" ng-click="vm.showDialog(req)">More Information</span></a>
+        <span class="item-status">{{ req.status }}</span>
 
       </kanban-card>
 
@@ -46,11 +48,12 @@
     <div layout-fill layout-margin layout-padding layout="column">
 
       <kanban-card ng-repeat="req in vm.data" ng-if="req.status==='In Review'">
-        <h4>{{ req.Number }}</h4>
+        <h4 class="req-number">{{ req.Number }}</h4>
         <img ng-src="{{ vm.icons[req.Number[0]].link}}">
         <p>{{ req.Requirement }}</p>
         <button ng-click="vm.updateProgress(req)"><strong>></strong></button>
-        <span>{{ req.status }}</span>
+        <a><span class="more-info" ng-click="vm.showDialog(req)">More Information</span></a>
+        <span class="item-status">{{ req.status }}</span>
 
       </kanban-card>
 
@@ -62,11 +65,12 @@
     <div layout-fill layout-margin layout-padding layout="column">
 
       <kanban-card ng-repeat="req in vm.data" ng-if="req.status==='Complete'">
-        <h4>{{ req.Number }}</h4>
+        <h4 class="req-number">{{ req.Number }}</h4>
         <img ng-src="{{ vm.icons[req.Number[0]].link}}">
         <p>{{ req.Requirement }}</p>
-        <button ng-click="vm.updateProgress(req)"><strong>></strong></button>
-        <span>{{ req.status }}</span>
+        <button ng-disabled="true" style="color:green"><strong>✔</strong></button>
+        <a><span class="more-info" ng-click="vm.showDialog(req)">More Information</span></a>
+        <span class="item-status" style="color:green;">{{ req.status }}</span>
 
       </kanban-card>
 
