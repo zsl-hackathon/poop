@@ -17,7 +17,9 @@
     <div layout-fill layout-margin layout-padding layout="column">
 
       <kanban-card ng-repeat="req in vm.data" ng-if="req.status==='todo'">
-        <h4>{{ req.Number }}</h4>
+        <h4 class="req-number">{{ req.Number }}</h4>
+        <img ng-src="{{ vm.icons[req.Number[0]].link}}">
+        <p>{{ req.Requirement }}</p>
         <button ng-click="vm.updateProgress(req)"><strong>></strong></button>
         <span>{{ req.status }}</span>
 
@@ -29,8 +31,11 @@
 
       <kanban-card ng-repeat="req in vm.data" ng-if="req.status==='in progress'">
         <h4>{{ req.Number }}</h4>
+        <img ng-src="{{ vm.icons[req.Number[0]].link}}">
+        <p>{{ req.Requirement }}</p>
         <button ng-click="vm.updateProgress(req)"><strong>></strong></button>
         <span>{{ req.status }}</span>
+
       </kanban-card>
 
     </div>
@@ -39,8 +44,11 @@
 
       <kanban-card ng-repeat="req in vm.data" ng-if="req.status==='in review'">
         <h4>{{ req.Number }}</h4>
+        <img ng-src="{{ vm.icons[req.Number[0]].link}}">
+        <p>{{ req.Requirement }}</p>
         <button ng-click="vm.updateProgress(req)"><strong>></strong></button>
         <span>{{ req.status }}</span>
+
       </kanban-card>
 
     </div>
@@ -49,8 +57,11 @@
 
       <kanban-card ng-repeat="req in vm.data" ng-if="req.status==='complete'">
         <h4>{{ req.Number }}</h4>
+        <img ng-src="{{ vm.icons[req.Number[0]].link}}">
+        <p>{{ req.Requirement }}</p>
         <button ng-click="vm.updateProgress(req)"><strong>></strong></button>
         <span>{{ req.status }}</span>
+
       </kanban-card>
 
     </div>

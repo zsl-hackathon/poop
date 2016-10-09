@@ -9,18 +9,21 @@
   /* @ngInject */
   function DashboardController($q, dataservice, $http, logger) {
     var vm = this;
-console.log("loaded");
+
     vm.title = 'Dashboard';
+
     var data = [
-        {link: 'http://imgur.com/aOtkeqT.png'},
-        {link: 'http://imgur.com/WhH7SYd.png'},
-        {link: 'http://imgur.com/rnYLMVC.png'},
-        {link: 'http://imgur.com/xVw0yQ2.png'},
-        {link: 'http://imgur.com/GN9wzIb.png'},
-        {link: 'http://imgur.com/aTPVPVO.png'},
-        {link: 'http://imgur.com/d4SPWnS.png'},
-        {link: 'http://imgur.com/lMemDNl.png'}
+        { requirement: 'transparency', link: 'http://imgur.com/aOtkeqT.png'},
+        { requirement: 'compliance', link: 'http://imgur.com/WhH7SYd.png'},
+        { requirement: 'commitment', link: 'http://imgur.com/rnYLMVC.png'},
+        { requirement: 'best practice', link: 'http://imgur.com/xVw0yQ2.png'},
+        { requirement: 'responsibility', link: 'http://imgur.com/GN9wzIb.png'},
+        { requirement: 'employees', link: 'http://imgur.com/aTPVPVO.png'},
+        { requirement: 'development', link: 'http://imgur.com/d4SPWnS.png'},
+        { requirement: 'improvement', link: 'http://imgur.com/lMemDNl.png'}
       ];
+
+    vm.icons = data;
 
     $http.get('data/RSPO_Principle2.json')
       .then(function(result) {
@@ -64,7 +67,6 @@ console.log("loaded");
     d3.select('.status').selectAll('li')
       .data(data).enter()
       .append('li').on('mouseover', function (d) {
-        console.log("hey")
       })
       .append('div')
       .append('img').attr('src', function(d) {
