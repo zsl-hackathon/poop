@@ -9,7 +9,7 @@ var logger = require('morgan');
 var port = process.env.PORT || 8001;
 var four0four = require('./utils/404')();
 
-var environment = process.env.NODE_ENV || 'dev';
+var environment = process.env.NODE_ENV || 'production';
 
 app.use(favicon(__dirname + '/favicon.ico'));
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -26,6 +26,7 @@ switch (environment) {
   case 'production':
     console.log('** BUILD **');
     app.use(express.static('./build/'));
+    app.use(express.static('./'));
     // Any invalid calls for templateUrls are under app/* and should return 404
     app.use('/app/*', function(req, res, next) {
       four0four.send404(req, res);
