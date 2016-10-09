@@ -32,7 +32,8 @@
     "angular-material": "^1.1.1",
     "d3": "v3.5.17",
     "radial-progress-chart": "^0.0.4",
-    "angular-material-icons": "^0.7.1"
+    "angular-material-icons": "^0.7.1",
+    "d3-liquid-fill-gauge": "*"
   },
   "resolutions": {
     "angular": "1.5.3"
