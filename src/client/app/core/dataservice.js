@@ -29,7 +29,7 @@
         }
 
         cards = data.map(function(el) {
-          el.status = el['Smallholder/Group'] == CARD_OWNER_TYPE.NONE ? CARD_STATUS.COMPLETE : randomStatus();
+          el.status = el['Smallholder/Group'] == CARD_OWNER_TYPE.NONE ? CARD_STATUS.COMPLETE : el['Number'] == "2.2.1" ? CARD_STATUS.TO_DO : randomStatus();
           return el;
         });
     });
