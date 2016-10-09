@@ -30,12 +30,15 @@
 
       <div layout-fill layout-margin layout-padding layout="column">
 
+      <!-- <h2>Documents</h2> -->
+
         <kanban-card ng-repeat="req in vm.data" ng-if="req.status==='To Do'">
           <h4 class="req-number">{{ req.Number }}</h4>
           <ng-md-icon icon="insert_drive_file" ng-if="req['Evidence format']==='Document'">Document</ng-md-icon>
           <ng-md-icon icon="insert_photo" ng-if="req['Evidence format']==='Image(s)'" class="material-icons">Image(s)</ng-md-icon>
           <ng-md-icon icon="save" ng-if="req['Evidence format']==='Record'" class="material-icons">Record</ng-md-icon>
           <ng-md-icon icon="map" ng-if="req['Evidence format']==='Map'" class="material-icons">Map</ng-md-icon>
+          <hr class="underline"></hr>
           <p>{{ req.Requirement }}</p>
           <button ng-click="vm.updateProgress(req);"><strong>></strong></button>
           <a><span class="more-info" ng-click="vm.showDialog(req)">More Information</span></a>
@@ -56,6 +59,7 @@
           <ng-md-icon icon="insert_photo" ng-if="req['Evidence format']==='Image(s)'" class="material-icons">Image(s)</ng-md-icon>
           <ng-md-icon icon="save" ng-if="req['Evidence format']==='Record'" class="material-icons">Record</ng-md-icon>
           <ng-md-icon icon="map" ng-if="req['Evidence format']==='Map'" class="material-icons">Map</ng-md-icon>
+          <hr class="underline"></hr>
           <p>{{ req.Requirement }}</p>
           <button ng-click="vm.updateProgress(req)"><strong>></strong></button>
           <a><span class="more-info" ng-click="vm.showDialog(req)">More Information</span></a>
@@ -76,6 +80,7 @@
           <ng-md-icon icon="insert_photo" ng-if="req['Evidence format']==='Image(s)'" class="material-icons">Image(s)</ng-md-icon>
           <ng-md-icon icon="save" ng-if="req['Evidence format']==='Record'" class="material-icons">Record</ng-md-icon>
           <ng-md-icon icon="map" ng-if="req['Evidence format']==='Map'" class="material-icons">Map</ng-md-icon>
+          <hr class="underline"></hr>
           <p>{{ req.Requirement }}</p>
           <button ng-click="vm.updateProgress(req)"><strong>></strong></button>
           <a><span class="more-info" ng-click="vm.showDialog(req)">More Information</span></a>
@@ -96,6 +101,7 @@
           <ng-md-icon icon="insert_photo" ng-if="req['Evidence format']==='Image(s)'" class="material-icons">Image(s)</ng-md-icon>
           <ng-md-icon icon="save" ng-if="req['Evidence format']==='Record'" class="material-icons">Record</ng-md-icon>
           <ng-md-icon icon="map" ng-if="req['Evidence format']==='Map'" class="material-icons">Map</ng-md-icon>
+          <hr class="underline"></hr>
           <p>{{ req.Requirement }}</p>
           <button ng-disabled="true" style="color:green"><strong>✔</strong></button>
           <a><span class="more-info" ng-click="vm.showDialog(req)">More Information</span></a>
