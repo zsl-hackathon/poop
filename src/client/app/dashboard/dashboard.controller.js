@@ -49,6 +49,10 @@
         updateSmallholderProgress();
       }
 
+      vm.uploadDocument = function(id) {
+        console.log(id);
+      }
+
     function updateSmallholderProgress() {
         dataservice.getSmallholderProgress().then(function(progress) {
           console.log("Progress: ", progress);
@@ -146,6 +150,10 @@
         $scope.closeDialog = function() {
           $mdDialog.hide();
         };
+        $scope.uploadDocument = function(id) {
+            dataservice.uploadDocument(id);
+            item.uploadedDocument = true;
+        }
       }
     };
   }

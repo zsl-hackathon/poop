@@ -44,10 +44,35 @@
       updateProgress: updateProgress,
       getSmallholderProgress: getSmallholderProgress,
       getGroupProgress: getGroupProgress,
+      uploadDocument: uploadDocument,
       CARD_STATUS: CARD_STATUS
     };
 
     return service;
+
+    function uploadDocument(id) {
+      return getSmallholderCards({id: id}).then(function(cards) {
+        cards[0].uploadedDocument = true;
+      });
+    }
+    function getGroupProgress() {
+      return getGroupCards().then(function(cards) {
+        return getUserProgress(cards);
+      });
+    }
+    function getUserProgress(userCards) {
+      return userCards.filter(function(card) {
+        return card.status === CARD_STATUS.COMPLETE;
+      }).length / userCards.length * 100;
+    }
+
+    function getSmallholderCards(filterBy) {
+      filterBy = filterBy || {};
+      filterBy['Smallholder/Group'] = function(v) {
+        return v == CARD_OWNER_TYPE.SMALLHOLDER || v == CARD_OWNER_TYPE.NONE;
+      };
+      return getCards(filterBy);
+    }
 
     function getMessageCount() { return $q.when(72); }
 
