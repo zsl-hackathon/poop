@@ -1,10 +1,26 @@
-<div class="requirement-dialog" layout-margin layout-padding style="height:300px;width:500px;" ng-click="closeDialog()">
+<div class="requirement-dialog" layout-margin layout-padding style="height:300px;width:500px;">
 
-  <h4>{{ item.Number }}</h4>
+  <span>{{ item.Number }}</span>
+  <span class="close-dialog" ng-click="closeDialog()"><strong>X</strong></span>
 
   <h2>{{ item.Requirement }}</h2>
 
-  <span>{{ item.status }}</span>
+  <span style="margin-left:8px;font-weight:bold;">Evidence required: </span>
+  <br />
+  <span>{{ item.Evidence }}</span>
+
+  <div ng-if="item['Evidence format'] && item['Evidence format'] !== '-'">
+    <span style="font-weight:bold;">Evidence format: </span>
+    <br />
+    <span>{{ item["Evidence format"] }}</span>
+  </div>
+
+  <span class="item-status" ng-if="item.status !== 'Complete'">{{ item.status }}</span>
+
+  <div ng-if="item.status==='Complete'">
+    <h4><strong>Congratulations! You have completed this requirement</strong></h4>
+    <span layout-margin layout-padding class="completed">Let others know you have made progress</span><img layout-margin layout-padding ng-src="images/facebook_share.png">
+  </div>
 
 
 </div>
