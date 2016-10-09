@@ -13,14 +13,14 @@
     vm.title = 'Dashboard';
 
     var data = [
-        { requirement: 'transparency', link: 'http://imgur.com/aOtkeqT.png'},
-        { requirement: 'compliance', link: 'http://imgur.com/WhH7SYd.png'},
-        { requirement: 'commitment', link: 'http://imgur.com/rnYLMVC.png'},
-        { requirement: 'best practice', link: 'http://imgur.com/xVw0yQ2.png'},
-        { requirement: 'responsibility', link: 'http://imgur.com/GN9wzIb.png'},
+        // { requirement: 'transparency', link: 'http://imgur.com/aOtkeqT.png'},
+        // { requirement: 'compliance', link: 'http://imgur.com/WhH7SYd.png'},
+        // { requirement: 'commitment', link: 'http://imgur.com/rnYLMVC.png'},
+        // { requirement: 'best practice', link: 'http://imgur.com/xVw0yQ2.png'},
+        // { requirement: 'responsibility', link: 'http://imgur.com/GN9wzIb.png'},
         { requirement: 'employees', link: 'http://imgur.com/aTPVPVO.png'},
-        { requirement: 'development', link: 'http://imgur.com/d4SPWnS.png'},
-        { requirement: 'improvement', link: 'http://imgur.com/lMemDNl.png'}
+        // { requirement: 'development', link: 'http://imgur.com/d4SPWnS.png'},
+        // { requirement: 'improvement', link: 'http://imgur.com/lMemDNl.png'}
       ];
 
     vm.icons = data;
@@ -65,9 +65,9 @@
       }
 
     var colors = [
-      '#2eb82e',
-      '#ff9900',
-      '#00ccff'
+      '#89bf4a',
+      '#fdb813',
+      '#ee7813'
     ];
 
     d3.select('.status').selectAll('li')
@@ -96,13 +96,13 @@
       ];
       new RadialProgressChart(this.parentNode, {
         max: 100,
-        diameter: 30,
+        diameter: 500,
         shadow: {
           width: 0
         },
         stroke: {
-          width: 6,
-          gap: 2
+          width: 100,
+          gap: 20
         },
         series: d.series
       });
